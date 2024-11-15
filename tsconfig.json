@@ -1,7 +1,18 @@
 {
-  "files": [],
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "include": ["src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["vite/client"],
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
